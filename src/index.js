@@ -4,7 +4,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { theme } from "./theme";
 import { GlobalStyle } from './GlobalStyle';
-import { ThemeProvider } from "style";
+import { ThemeProvider } from "styled-components";
 import { Normalize } from "styled-normalize";
 
 
