@@ -1,4 +1,5 @@
 import { StyledHeader, Wrapper, LinksWrapper, TitleLink, StyledVideoIcon, TittleText, Navigation, StyledNavLink } from "./styled";
+import { Search } from "../../features/Search";
 
 const Header = () => {
 
@@ -21,7 +22,7 @@ const Header = () => {
                         </Navigation>
                     </nav>
                 </LinksWrapper>
-                {/* <Search /> */}
+                <Search />
             </Wrapper>
         </StyledHeader>
     );

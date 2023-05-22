@@ -10,10 +10,12 @@ export const StyledHeader = styled.header`
   background: ${({ theme }) => theme.colors.black};
   color: ${({ theme }) => theme.colors.white};
   padding: 23px 16px;
+  height: 94px;
 
   @media (max-width: ${mobileBP}px) {
     background: ${({ theme }) => theme.colors.black};
     padding: 16px;
+    height: 142px;
   }
 `;
 
@@ -84,7 +86,7 @@ export const Navigation = styled.div`
   }
 `;
 
-export const StyledNavLink = styled.a`
+export const StyledNavLink = styled.button`
   color: ${({ theme }) => theme.colors.white};
   background: none;
   border: none;
@@ -94,15 +96,14 @@ export const StyledNavLink = styled.a`
   padding: 13.5px 24px;
   text-decoration: none;
   display: block;
-  border: 1px solid ${({ theme }) => theme.colors.white};   /* temporarily */
 
-
-  &.active {
-    border: 1px solid ${({ theme }) => theme.colors.white};
+  &:hover {
+    cursor: pointer;
+    border: 1px solid ${({ theme }) => theme.colors.white};   /* temporarily */
   }
 
-  &.hover {
-    cursor: pointer;
+  &:active {
+    border: 1px solid ${({ theme }) => theme.colors.white};
   }
 
   @media (max-width: ${mobileBP}px) {
