@@ -6,7 +6,6 @@ function App() {
   return (
     <>
       <Header />
-      <MovieTile></MovieTile>
       <MoviesList></MoviesList>
       
 

@@ -16,7 +16,7 @@ const MoviesList = () => {
     // const totalPages = useSelector(selectTotalPages);
     // const totalResults = useSelector(selectTotalResults);
 
-    const [searchParams] = useSearchParams({ page: 1 });
+    const searchParams = new URLSearchParams(window.location.search);
     const page = Number(searchParams.get("page")) || 1;
 
     useEffect(() => {
