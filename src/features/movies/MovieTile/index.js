@@ -1,17 +1,22 @@
 import poster from "./Images/poster.png";
 import { TileWrapper, Image, Description, Title, Subtitle, Tags, Tag, RatingWrapper, Star, Rate, Votes } from "./styled";
+import { imagesBaseUrl } from "../../../moviesBrowserApi";
+import noPoster from "./Images/noPoster.png";
 
-export const MovieTile = () => {
+export const MovieTile = ({
+    id,
+    title,
+    poster_path,
+}) => {
 
     return (
-        <TileWrapper>
+        <TileWrapper key={id} id={id}>
             <Image
-                src={poster} alt=""
+                src={poster_path ? `${imagesBaseUrl}/w500${poster_path}` : noPoster} 
+                alt=""
             />
             <Description>
-                <Title>
-                    Mulan
-                </Title>
+                {title && <Title>{title}</Title>}
                 <Subtitle>
                     2020
                 </Subtitle>
