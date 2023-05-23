@@ -33,8 +33,8 @@ export const {
 
 const selectMoviesState = (state) => state.movies;
 
-export const selectStatus = (state) => selectMoviesState(state).status;
 export const selectMovies = (state) => selectMoviesState(state).movies;
+export const selectStatus = (state) => selectMoviesState(state).status;
 export const selectTotalPages = (state) => selectMoviesState(state).totalPages;
 export const selectTotalResults = (state) => selectMoviesState(state).totalResults;
 
