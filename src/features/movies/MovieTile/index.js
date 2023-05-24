@@ -7,12 +7,14 @@ export const MovieTile = ({
     title,
     poster_path,
     release_date,
+    vote_average,
+    vote_count,
 }) => {
 
     return (
         <TileWrapper key={id} id={id}>
             <Image
-                src={poster_path ? `${imagesBaseUrl}/w500${poster_path}` : noPoster} 
+                src={poster_path ? `${imagesBaseUrl}/w500${poster_path}` : noPoster}
                 alt=""
             />
             <Description>
@@ -23,15 +25,19 @@ export const MovieTile = ({
                     <Tag>Adventure</Tag>
                     <Tag>Action</Tag>
                 </Tags>
-                <RatingWrapper>
+                {vote_average && vote_count ? (
+                    <RatingWrapper>
+                        <Star />
+                        <Rate>{vote_average}</Rate>
+                        <Votes>{vote_count} votes</Votes>
+                    </RatingWrapper>
+                ) : (
+                    <RatingWrapper>
                     <Star />
-                    <Rate>
-                        7,8
-                    </Rate>
-                    <Votes>
-                        35 votes
-                    </Votes>
-                </RatingWrapper>
+                    <Rate>0</Rate>
+                    <Votes>0 votes</Votes>
+                    </RatingWrapper>
+                )};
             </Description>
         </TileWrapper>
     );

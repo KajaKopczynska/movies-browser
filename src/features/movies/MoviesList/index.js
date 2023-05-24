@@ -36,8 +36,8 @@ const MoviesList = () => {
                                     id,
                                     title,
                                     poster_path,
-                                    //   vote_count,
-                                    //   vote_average,
+                                    vote_count,
+                                    vote_average,
                                     release_date,
                                     //   genre_ids,
                                 }) => (
@@ -47,9 +47,9 @@ const MoviesList = () => {
                                             id={id}
                                             title={title}
                                             poster_path={poster_path}
-                                        // vote_average={vote_average}
-                                        // vote_count={vote_count}
-                                        release_date={release_date}
+                                            vote_average={vote_average}
+                                            vote_count={vote_count}
+                                            release_date={release_date}
                                         // genre_ids={genre_ids}
                                         />
                                         {/* </StyledLink> */}
