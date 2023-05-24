@@ -4,22 +4,22 @@ import { ReactComponent as StarIcon } from "./Images/Star.svg";
 const mobileBP = ({ theme }) => theme.breakpoints.mobileMax;
 
 export const TileWrapper = styled.div`
-  width: 324px;
+  height: 100%;
   background: #ffffff;
   display: grid;
   grid-template-rows: auto 1fr;
-  transition: all 170ms cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
   box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
   border-radius: 5px;
   padding: 16px;
 
   &:hover {
     cursor: pointer;
-    transform: translateY(-8px);
-    box-shadow: 0px 8px 20px 5px #a1bae2;
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px 5px #9aa6b8;
   }
   &:active {
-    transform: translateY(-8px);
+    transform: translateY(-5px);
   }
 
   @media (max-width: ${mobileBP}px) {

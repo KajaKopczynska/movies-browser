@@ -37,7 +37,7 @@ export const MovieTile = ({
                     <Rate>0</Rate>
                     <Votes>0 votes</Votes>
                     </RatingWrapper>
-                )};
+                )}
             </Description>
         </TileWrapper>
     );
