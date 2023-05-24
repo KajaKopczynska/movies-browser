@@ -6,6 +6,7 @@ export const MovieTile = ({
     id,
     title,
     poster_path,
+    release_date,
 }) => {
 
     return (
@@ -16,9 +17,7 @@ export const MovieTile = ({
             />
             <Description>
                 {title && <Title>{title}</Title>}
-                <Subtitle>
-                    2020
-                </Subtitle>
+                {release_date && (<Subtitle>{new Date(release_date).getFullYear()}</Subtitle>)}
                 <Tags>
                     <Tag>Action</Tag>
                     <Tag>Adventure</Tag>

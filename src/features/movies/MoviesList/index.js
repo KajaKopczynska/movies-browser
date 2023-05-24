@@ -38,7 +38,7 @@ const MoviesList = () => {
                                     poster_path,
                                     //   vote_count,
                                     //   vote_average,
-                                    //   release_date,
+                                    release_date,
                                     //   genre_ids,
                                 }) => (
                                     <li key={id}>
@@ -49,7 +49,7 @@ const MoviesList = () => {
                                             poster_path={poster_path}
                                         // vote_average={vote_average}
                                         // vote_count={vote_count}
-                                        // release_date={release_date}
+                                        release_date={release_date}
                                         // genre_ids={genre_ids}
                                         />
                                         {/* </StyledLink> */}
