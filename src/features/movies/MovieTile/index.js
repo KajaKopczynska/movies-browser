@@ -1,4 +1,3 @@
-import poster from "./Images/poster.png";
 import { TileWrapper, Image, Description, Title, Subtitle, Tags, Tag, RatingWrapper, Star, Rate, Votes } from "./styled";
 import { imagesBaseUrl } from "../../../moviesBrowserApi";
 import noPoster from "./Images/noPoster.png";

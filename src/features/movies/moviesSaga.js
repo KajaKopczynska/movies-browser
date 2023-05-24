@@ -8,7 +8,7 @@ function* fetchMoviesHandler({payload: {page}}) {
         //     ? `${baseUrl}/movie/popular${apiKey}${language}&page=${page}`
         //     : `${baseUrl}/search/movie${apiKey}${language}&query=${query}&page=${page}`;
     try {
-        yield delay(1000);
+        yield delay(500);
         const movies = yield call(getApi, path);
         yield put(fetchMoviesSuccess(movies));
     } catch {

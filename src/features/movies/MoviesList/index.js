@@ -5,8 +5,6 @@ import { Container } from "../../../common/Container";
 import { SectionTitle } from "../../../common/SectionTitle";
 import { MovieList } from "./styled";
 import { MovieTile } from "../MovieTile";
-import { useSearchParams } from "react-router-dom";
-
 
 const MoviesList = () => {
     const dispatch = useDispatch();

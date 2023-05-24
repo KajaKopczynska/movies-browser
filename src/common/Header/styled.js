@@ -4,8 +4,6 @@ import { ReactComponent as VideoIcon } from "./VideoIcon.svg";
 
 const mobileBP = ({ theme }) => theme.breakpoints.mobileMax;
 
-
-
 export const StyledHeader = styled.header`
   background: ${({ theme }) => theme.colors.black};
   color: ${({ theme }) => theme.colors.white};
