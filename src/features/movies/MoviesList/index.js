@@ -5,6 +5,7 @@ import { Container } from "../../../common/Container";
 import { SectionTitle } from "../../../common/SectionTitle";
 import { MovieList } from "./styled";
 import { MovieTile } from "../MovieTile";
+import { fetchGenres } from "../MovieTile/Genre/genreSlice";
 
 const MoviesList = () => {
     const dispatch = useDispatch();
@@ -19,7 +20,7 @@ const MoviesList = () => {
 
     useEffect(() => {
         dispatch(fetchMoviesLoading({ page }));
-
+        dispatch(fetchGenres());
     }, [dispatch, page]);
 
     return (
@@ -39,7 +40,7 @@ const MoviesList = () => {
                                     vote_count,
                                     vote_average,
                                     release_date,
-                                    //   genre_ids,
+                                    genre_ids,
                                 }) => (
                                     <li key={id}>
                                         {/* <StyledLink to={`/movies/${id}`}> */}
@@ -50,7 +51,7 @@ const MoviesList = () => {
                                             vote_average={vote_average}
                                             vote_count={vote_count}
                                             release_date={release_date}
-                                        // genre_ids={genre_ids}
+                                            genre_ids={genre_ids}
                                         />
                                         {/* </StyledLink> */}
                                     </li>
