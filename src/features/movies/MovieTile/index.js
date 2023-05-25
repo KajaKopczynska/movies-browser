@@ -1,4 +1,5 @@
-import { TileWrapper, Image, Description, Title, Subtitle, Tags, Tag, RatingWrapper, Star, Rate, Votes } from "./styled";
+import { TileWrapper, Image, Description, Title, Subtitle, RatingWrapper, Star, Rate, Votes } from "./styled";
+import { Genre } from "./Genre";
 import { imagesBaseUrl } from "../../../moviesBrowserApi";
 import noPoster from "./Images/noPoster.png";
 
@@ -9,6 +10,7 @@ export const MovieTile = ({
     release_date,
     vote_average,
     vote_count,
+    genre_ids,
 }) => {
 
     return (
@@ -20,11 +22,7 @@ export const MovieTile = ({
             <Description>
                 {title && <Title>{title}</Title>}
                 {release_date && (<Subtitle>{new Date(release_date).getFullYear()}</Subtitle>)}
-                <Tags>
-                    <Tag>Action</Tag>
-                    <Tag>Adventure</Tag>
-                    <Tag>Action</Tag>
-                </Tags>
+                {genre_ids && <Genre genre_ids={genre_ids} />}
                 {vote_average && vote_count ? (
                     <RatingWrapper>
                         <Star />
@@ -33,9 +31,9 @@ export const MovieTile = ({
                     </RatingWrapper>
                 ) : (
                     <RatingWrapper>
-                    <Star />
-                    <Rate>0</Rate>
-                    <Votes>0 votes</Votes>
+                        <Star />
+                        <Rate>0</Rate>
+                        <Votes>0 votes</Votes>
                     </RatingWrapper>
                 )}
             </Description>
