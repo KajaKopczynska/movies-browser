@@ -9,7 +9,7 @@ const pulseAnimation = keyframes`
     transform: scale(1);
   }
   50% {
-    transform: scale(1.2);
+    transform: scale(1.4);
   }
   100% {
     transform: scale(1);
@@ -31,7 +31,7 @@ export const Button = styled.button`
   display: flex;
   align-items: center;
   padding: 8px 12px;
-  /* margin-right: 12px; */
+  margin-right: 12px;
   cursor: pointer;
   transition: background 0.1s;
 
