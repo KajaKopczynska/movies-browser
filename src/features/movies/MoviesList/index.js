@@ -1,18 +1,19 @@
 import { useDispatch, useSelector } from "react-redux";
-import { fetchMoviesLoading, selectMovies, selectStatus, selectTotalPages, selectTotalResults } from "../moviesSlice";
 import { useEffect } from "react";
+import { fetchMoviesLoading, selectMovies, selectTotalPages, selectStatus, selectTotalResults } from "../moviesSlice";
 import { Container } from "../../../common/Container";
 import { SectionTitle } from "../../../common/SectionTitle";
 import { MovieList } from "./styled";
 import { MovieTile } from "../MovieTile";
+import { Pagination } from "../../../common/Pagination";
 import { fetchGenres } from "../MovieTile/Genre/genreSlice";
 
 const MoviesList = () => {
     const dispatch = useDispatch();
 
     const movies = useSelector(selectMovies);
+    const totalPages = useSelector(selectTotalPages);
     // const stateOfLoading = useSelector(selectStatus);
-    // const totalPages = useSelector(selectTotalPages);
     // const totalResults = useSelector(selectTotalResults);
 
     const searchParams = new URLSearchParams(window.location.search);
@@ -61,8 +62,8 @@ const MoviesList = () => {
                     )}
                 </section>
             </Container>
+            <Pagination location="movies" totalPages={totalPages} />
         </>
-
     );
 };
 
