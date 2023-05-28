@@ -7,6 +7,8 @@ import { MovieList } from "./styled";
 import { MovieTile } from "../MovieTile";
 import { Pagination } from "../../../common/Pagination";
 import { fetchGenres } from "../MovieTile/Genre/genreSlice";
+import { useSearchParams } from "react-router-dom";
+import { searchQueryParamName } from "../../../useQueryParameter";
 
 const MoviesList = () => {
     const dispatch = useDispatch();
@@ -16,13 +18,14 @@ const MoviesList = () => {
     // const stateOfLoading = useSelector(selectStatus);
     // const totalResults = useSelector(selectTotalResults);
 
-    const searchParams = new URLSearchParams(window.location.search);
+    const [searchParams] = useSearchParams({ page: 1 });
     const page = Number(searchParams.get("page")) || 1;
+    const query = searchParams.get(searchQueryParamName) || null;
 
     useEffect(() => {
-        dispatch(fetchMoviesLoading({ page }));
+        dispatch(fetchMoviesLoading({ page, query }));
         dispatch(fetchGenres());
-    }, [dispatch, page]);
+    }, [dispatch, page, query]);
 
     return (
         <>
