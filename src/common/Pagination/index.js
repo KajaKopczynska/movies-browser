@@ -1,7 +1,6 @@
 import { useSearchParams } from "react-router-dom";
 import { Wrapper, Button, ArrowIconLeft, ButtonText, PageCounter, PageNumbers, ArrowIconRight } from "./styled";
-
-const searchQueryParamName = "search";
+import { searchQueryParamName } from "../../useQueryParameter";
 
 export const Pagination = ({ location, totalPages }) => {
 
@@ -43,7 +42,7 @@ export const Pagination = ({ location, totalPages }) => {
                 : setSearchParams({ page: totalPage });
         }
     };
-    
+
     return (
         <Wrapper location={location}>
             <Button disabled={currentPage <= 1} onClick={onGoToFirst}>
