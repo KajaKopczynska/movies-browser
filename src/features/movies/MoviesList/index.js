@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { fetchMoviesLoading, selectMovies, selectTotalPages, selectStatus, selectTotalResults } from "../moviesSlice";
 import { Container } from "../../../common/Container";
 import { SectionTitle } from "../../../common/SectionTitle";
-import { MovieList } from "./styled";
+import { MovieList, StyledLink } from "./styled";
 import { MovieTile } from "../MovieTile";
 import { Pagination } from "../../../common/Pagination";
 import { fetchGenres } from "../MovieTile/Genre/genreSlice";
@@ -47,7 +47,7 @@ const MoviesList = () => {
                                     genre_ids,
                                 }) => (
                                     <li key={id}>
-                                        {/* <StyledLink to={`/movies/${id}`}> */}
+                                        <StyledLink to={`/movies/${id}`}>
                                         <MovieTile
                                             id={id}
                                             title={title}
@@ -57,7 +57,7 @@ const MoviesList = () => {
                                             release_date={release_date}
                                             genre_ids={genre_ids}
                                         />
-                                        {/* </StyledLink> */}
+                                        </StyledLink>
                                     </li>
                                 )
                             )}
