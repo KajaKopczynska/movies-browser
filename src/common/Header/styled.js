@@ -1,5 +1,5 @@
 import styled from "styled-components";
-// import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { ReactComponent as VideoIcon } from "./VideoIcon.svg";
 
 const mobileBP = ({ theme }) => theme.breakpoints.mobileMax;
@@ -17,7 +17,7 @@ export const StyledHeader = styled.header`
   }
 `;
 
-export const TitleLink = styled.a`
+export const TitleLink = styled(Link)`
   color: ${({ theme }) => theme.colors.white};
   text-decoration: none;
   display: flex;
@@ -84,7 +84,7 @@ export const Navigation = styled.div`
   }
 `;
 
-export const StyledNavLink = styled.button`
+export const StyledNavLink = styled(NavLink)`
   color: ${({ theme }) => theme.colors.white};
   background: none;
   border: none;
