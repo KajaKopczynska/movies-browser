@@ -1,3 +1,4 @@
+import { MainContent } from "../../MainContent";
 import { Wrapper, LoadingAnimation } from "./styled";
 
 export const Loading = () => {
@@ -5,10 +6,12 @@ export const Loading = () => {
 
     return (
         <>
-            <Wrapper>
-                {/* <Header></Header> */}
-                <LoadingAnimation />
-            </Wrapper>
+            <MainContent>
+                <Wrapper>
+                    {/* <Header></Header> */}
+                    <LoadingAnimation />
+                </Wrapper>
+            </MainContent>
         </>
     );
 };

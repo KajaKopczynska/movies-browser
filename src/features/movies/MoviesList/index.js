@@ -10,6 +10,7 @@ import { fetchGenres } from "../MovieTile/Genre/genreSlice";
 import { useSearchParams } from "react-router-dom";
 import { searchQueryParamName } from "../../../useQueryParameter";
 import { Loading } from "../../../common/status/Loading";
+import { MainContent } from "../../../common/MainContent";
 
 const MoviesList = () => {
     const dispatch = useDispatch();
@@ -33,44 +34,48 @@ const MoviesList = () => {
             {stateOfLoading === "loading" ? (
                 <Loading />
             ) : (
-                <Container>
-                    <section>
-                        <SectionTitle>
-                            Popular movies
-                        </SectionTitle>
-                        {movies && movies.length > 0 && (
-                            <MovieList>
-                                {movies.map(
-                                    ({
-                                        id,
-                                        title,
-                                        poster_path,
-                                        vote_count,
-                                        vote_average,
-                                        release_date,
-                                        genre_ids,
-                                    }) => (
-                                        <li key={id}>
-                                            <StyledLink to={`/movies/${id}`}>
-                                                <MovieTile
-                                                    id={id}
-                                                    title={title}
-                                                    poster_path={poster_path}
-                                                    vote_average={vote_average}
-                                                    vote_count={vote_count}
-                                                    release_date={release_date}
-                                                    genre_ids={genre_ids}
-                                                />
-                                            </StyledLink>
-                                        </li>
-                                    )
+                <MainContent>
+                    <>
+                        <Container>
+                            <section>
+                                <SectionTitle>
+                                    Popular movies
+                                </SectionTitle>
+                                {movies && movies.length > 0 && (
+                                    <MovieList>
+                                        {movies.map(
+                                            ({
+                                                id,
+                                                title,
+                                                poster_path,
+                                                vote_count,
+                                                vote_average,
+                                                release_date,
+                                                genre_ids,
+                                            }) => (
+                                                <li key={id}>
+                                                    <StyledLink to={`/movies/${id}`}>
+                                                        <MovieTile
+                                                            id={id}
+                                                            title={title}
+                                                            poster_path={poster_path}
+                                                            vote_average={vote_average}
+                                                            vote_count={vote_count}
+                                                            release_date={release_date}
+                                                            genre_ids={genre_ids}
+                                                        />
+                                                    </StyledLink>
+                                                </li>
+                                            )
+                                        )}
+                                    </MovieList>
                                 )}
-                            </MovieList>
-                        )}
-                    </section>
-                </Container>
+                            </section>
+                        </Container>
+                        <Pagination location="movies" totalPages={totalPages} />
+                    </>
+                </MainContent>
             )}
-            <Pagination location="movies" totalPages={totalPages} />
         </>
     );
 };
