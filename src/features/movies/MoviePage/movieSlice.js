@@ -34,7 +34,7 @@ export const {
     fetchMovieLoading,
     fetchMovieError,
     fetchMovieSuccess,
-} = movieDetailsAndCreditsSlice.actions;
+} = movieSlice.actions;
 
 const selectMovieState = (state) => state.movie;
 
