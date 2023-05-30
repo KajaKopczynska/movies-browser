@@ -11,6 +11,7 @@ import { useSearchParams } from "react-router-dom";
 import { searchQueryParamName } from "../../../useQueryParameter";
 import { Loading } from "../../../common/status/Loading";
 import { MainContent } from "../../../common/MainContent";
+import { Error } from "../../../common/status/Error";
 
 const MoviesList = () => {
     const dispatch = useDispatch();
@@ -33,6 +34,8 @@ const MoviesList = () => {
         <>
             {stateOfLoading === "loading" ? (
                 <Loading />
+            ) : stateOfLoading === "error" ? (
+                <Error />
             ) : (
                 <MainContent>
                     <>
