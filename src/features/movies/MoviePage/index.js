@@ -6,6 +6,7 @@ import { Name } from "./styled";
 import { Loading } from "../../../common/status/Loading";
 import { Error } from "../../../common/status/Error";
 import { searchQueryParamName } from "../../../useQueryParameter";
+import { BigPoster } from "./BigPoster";
 
 export const MoviePage = () => {
     const dispatch = useDispatch();
@@ -30,6 +31,7 @@ export const MoviePage = () => {
                 <Error />
             ) : (
                 <>
+                <BigPoster />
                     <Name>
                         TEST TEST TEST
                     </Name>
