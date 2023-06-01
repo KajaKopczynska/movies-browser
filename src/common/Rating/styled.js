@@ -45,10 +45,10 @@ export const Star = styled(StarIcon)`
 
 export const Rate = styled.span`
   color: ${({ theme }) => theme.colors.smoke};
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 150%;
-  margin: 0 0 0 10px;
+  margin: 0 10px 0 10px;
 
   @media (max-width: ${mobileMaxBP}px) {
     font-size: 13px;
@@ -70,12 +70,12 @@ export const MaxRate = styled.span`
   font-size: 16px;
 
   @media (max-width: ${mobileMaxBP}px) {
-    display: none;
+    font-size: 10px;
   }
   ${({ location }) =>
         location === "backgroundPoster" &&
         css`
-        
+
       @media (max-width: ${mobileMaxBP}px) {
         visibility: visible;
       }
@@ -95,7 +95,7 @@ export const Votes = styled.span`
   margin: 0 0 0 10px;
 
   @media (max-width: ${mobileMaxBP}px) {
-    font-size: 13px;
+    font-size: 10px;
     line-height: 130%;
   }
   ${({ location }) =>
