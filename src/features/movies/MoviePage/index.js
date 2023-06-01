@@ -7,6 +7,9 @@ import { Loading } from "../../../common/status/Loading";
 import { Error } from "../../../common/status/Error";
 import { searchQueryParamName } from "../../../useQueryParameter";
 import { BigPoster } from "./BigPoster";
+import { MovieInfo } from "./MovieInfo";
+import { MainContent } from "../../../common/MainContent";
+import { Container } from "../../../common/Container";
 
 export const MoviePage = () => {
     const dispatch = useDispatch();
@@ -31,7 +34,12 @@ export const MoviePage = () => {
                 <Error />
             ) : (
                 <>
-                <BigPoster />
+                    <BigPoster />
+                    <MainContent moviePage>
+                        <Container>
+                            <MovieInfo />
+                        </Container>
+                    </MainContent>
                     <Name>
                         TEST TEST TEST
                     </Name>
