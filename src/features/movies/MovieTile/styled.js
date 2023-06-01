@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { ReactComponent as StarIcon } from "./Images/Star.svg";
 
 const mobileBP = ({ theme }) => theme.breakpoints.mobileMax;
 
@@ -79,46 +78,3 @@ export const Subtitle = styled.p`
     font-size: 12px;
   }
 `;
-
-export const RatingWrapper = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
-export const Star = styled(StarIcon)`
-  width: 24px;
-  height: 21px;
-
-  @media (max-width: ${mobileBP}px) {
-    width: 16px;
-    height: 16px;
-  }
-`;
-
-export const Rate = styled.span`
-  color: ${({ theme }) => theme.colors.smoke};
-  font-size: 16px;
-  line-height: 150%;
-  font-weight: 600;
-  margin: 0 0 0 10px;
-
-  @media (max-width: ${mobileBP}px) {
-    font-size: 13px;
-    line-height: 130%;
-    margin: 0 0 0 10px;
-  }
-`;
-
-export const Votes = styled.span`
-  color: ${({ theme }) => theme.colors.waterloo};
-  font-size: 16px;
-  line-height: 150%;
-  margin: 0 0 0 10px;
-  @media (max-width: ${mobileBP}px) {
-    font-size: 13px;
-    line-height: 130%;
-    margin: 0 0 0 10px;
-  }
-`;
-
-

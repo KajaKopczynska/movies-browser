@@ -5,12 +5,8 @@ const mobileMaxBP = ({ theme }) => theme.breakpoints.mobileMax;
 
 export const RatingWrapper = styled.div`
   display: flex;
-  flex-direction: row;
   align-items: center;
-  gap: 12px;
-  @media (max-width: ${mobileMaxBP}px) {
-    gap: 7px;
-  }
+
   ${({ location }) =>
         location === "backgroundPoster" &&
         css`
@@ -21,6 +17,7 @@ export const RatingWrapper = styled.div`
       @media (max-width: ${mobileMaxBP}px) {
         flex-direction: row;
         align-items: center;
+        gap: 7px;
       }
     `}
 `;
@@ -28,12 +25,11 @@ export const RatingWrapper = styled.div`
 export const RatingSection = styled.div`
   display: flex;
   align-items: center;
-  gap: 8px;
 `;
 
 export const Star = styled(StarIcon)`
-  width: 24px;
-  height: 22px;
+    width: 24px;
+    height: 21px;
 
   @media (max-width: ${mobileMaxBP}px) {
     width: 16px;
@@ -48,16 +44,20 @@ export const Star = styled(StarIcon)`
 `;
 
 export const Rate = styled.span`
-  font-weight: 500;
-  font-size: 22px;
+  color: ${({ theme }) => theme.colors.smoke};
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  margin: 0 0 0 10px;
 
   @media (max-width: ${mobileMaxBP}px) {
-    font-weight: 600;
     font-size: 13px;
+    line-height: 130%;
   }
   ${({ location }) =>
         location === "backgroundPoster" &&
         css`
+      color: ${({ theme }) => theme.colors.white};
       font-size: 30px;
 
       @media (max-width: ${mobileMaxBP}px) {
@@ -75,25 +75,36 @@ export const MaxRate = styled.span`
   ${({ location }) =>
         location === "backgroundPoster" &&
         css`
+        
       @media (max-width: ${mobileMaxBP}px) {
         visibility: visible;
       }
+    `}  
+  ${({ location }) =>
+        location === "movieTile" &&
+        css`
+        visibility: collapse;
+        display: none;
     `}
 `;
 
 export const Votes = styled.span`
-  font-size: 14px;
+  color: ${({ theme }) => theme.colors.waterloo};
+  font-size: 16px;
+  line-height: 150%;
+  margin: 0 0 0 10px;
+
   @media (max-width: ${mobileMaxBP}px) {
-    color: ${({ theme }) => theme.colors.stormGrey};
     font-size: 13px;
+    line-height: 130%;
   }
   ${({ location }) =>
         location === "backgroundPoster" &&
         css`
+      color: ${({ theme }) => theme.colors.white};
       font-size: 16px;
 
       @media (max-width: ${mobileMaxBP}px) {
-        color: white;
         font-size: 10px;
       }
     `}

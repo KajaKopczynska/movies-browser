@@ -5,7 +5,7 @@ export const Rating = ({ location, voteAverage, voteCount }) => (
         <RatingSection>
             <Star location={location} />
             <Rate location={location}>{voteAverage}</Rate>
-            <MaxRate>/ 10</MaxRate>
+            <MaxRate location={location}>/ 10</MaxRate>
         </RatingSection>
         <Votes location={location}>{voteCount} votes</Votes>
     </RatingWrapper>
