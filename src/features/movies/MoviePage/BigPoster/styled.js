@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   background: ${({ theme }) => theme.colors.black};
   display: flex;
   justify-content: center;
-  position: relative; 
+  position: relative;
 `;
 
 export const Poster = styled.img`

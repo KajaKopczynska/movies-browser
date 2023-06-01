@@ -12,10 +12,12 @@ export const BigPoster = () => {
             {movieInfo.backdrop_path && (
                 <Wrapper>
                     <Gradient />
-                    <Poster
-                        src={`${imagesBaseUrl}/w1280/${movieInfo.backdrop_path}`}
-                        alt=""
-                    />
+                    <div>
+                        <Poster
+                            src={`${imagesBaseUrl}/w1280/${movieInfo.backdrop_path}`}
+                            alt=""
+                        />
+                    </div>
                     <Info>
                         <Title>{movieInfo.original_title}</Title>
                         <Rating
