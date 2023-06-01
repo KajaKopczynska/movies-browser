@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import { imagesBaseUrl } from "../../../../moviesBrowserApi";
 import { selectMovie } from "../movieSlice";
 import { Gradient, Info, Poster, Title, Wrapper } from "./styled";
+import { Rating } from "../../../../common/Rating";
 
 export const BigPoster = () => {
     const movieInfo = useSelector(selectMovie);
@@ -17,6 +18,10 @@ export const BigPoster = () => {
                     />
                     <Info>
                         <Title>{movieInfo.original_title}</Title>
+                        <Rating
+                            location="backgroundPoster"
+                            voteAverage={movieInfo.vote_average.toFixed(1)}
+                            voteCount={movieInfo.vote_count} />
                     </Info>
                 </Wrapper>
             )}
