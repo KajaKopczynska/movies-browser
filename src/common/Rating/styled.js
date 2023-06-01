@@ -68,6 +68,7 @@ export const Rate = styled.span`
 
 export const MaxRate = styled.span`
   font-size: 16px;
+  visibility: visible;
 
   @media (max-width: ${mobileMaxBP}px) {
     font-size: 10px;
@@ -85,6 +86,11 @@ export const MaxRate = styled.span`
         css`
         visibility: collapse;
         display: none;
+    `}
+  ${({ location }) =>
+        location === "movieInfo" &&
+        css`
+        visibility: visible;
     `}
 `;
 
