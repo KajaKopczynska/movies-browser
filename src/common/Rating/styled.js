@@ -64,6 +64,11 @@ export const Rate = styled.span`
         font-size: 14px;
       }
     `}
+  ${({ location }) =>
+        location === "movieInfo" &&
+        css`
+          font-size: 22px;
+    `}
 `;
 
 export const MaxRate = styled.span`
@@ -90,6 +95,7 @@ export const MaxRate = styled.span`
   ${({ location }) =>
         location === "movieInfo" &&
         css`
+          font-size: 14px;
         visibility: visible;
     `}
 `;
@@ -113,5 +119,11 @@ export const Votes = styled.span`
       @media (max-width: ${mobileMaxBP}px) {
         font-size: 10px;
       }
+    `}
+  ${({ location }) =>
+        location === "movieInfo" &&
+        css`
+          color: ${({ theme }) => theme.colors.black};
+          font-size: 14px;
     `}
 `;
