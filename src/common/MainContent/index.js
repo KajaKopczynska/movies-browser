@@ -16,7 +16,7 @@ export const MainContent = styled.main`
       padding-bottom: 336px;
 
       @media (max-width: ${mobileBP}px) {
-        padding-bottom: 88px;
+        padding: 16px;
       }
     `}
 `;
