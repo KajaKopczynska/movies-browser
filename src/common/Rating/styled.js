@@ -86,17 +86,24 @@ export const MaxRate = styled.span`
         visibility: visible;
       }
     `}  
+
   ${({ location }) =>
         location === "movieTile" &&
         css`
         visibility: collapse;
         display: none;
     `}
+
   ${({ location }) =>
         location === "movieInfo" &&
         css`
-          font-size: 14px;
+        font-size: 14px;
         visibility: visible;
+
+      @media (max-width: ${mobileMaxBP}px) {
+        visibility: collapse;
+        display: none;
+      }
     `}
 `;
 
@@ -125,5 +132,11 @@ export const Votes = styled.span`
         css`
           color: ${({ theme }) => theme.colors.black};
           font-size: 14px;
+
+       @media (max-width: ${mobileMaxBP}px) {
+          color: ${({ theme }) => theme.colors.waterloo};
+          font-size: 13px;
+          margin: 0;
+      }
     `}
 `;
