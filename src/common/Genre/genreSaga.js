@@ -1,5 +1,5 @@
 import { call, put, takeLatest } from "redux-saga/effects";
-import { apiKey, baseUrl, language, getApi } from "../../../../moviesBrowserApi";
+import { apiKey, baseUrl, language, getApi } from "../../moviesBrowserApi";
 import {
   fetchGenres,
   fetchGenresError,

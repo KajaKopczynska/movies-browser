@@ -1,6 +1,6 @@
 import { Image, Description as Information, Title, Subtitle, MovieInfoWrapper, CountryName, CountryNameShort, Label, Details, Description } from "./styled";
 import { format } from 'date-fns';
-import { Genre } from "../../MovieTile/Genre"; // do zmiany
+import { Genre } from "../../../../common/Genre"; // do zmiany
 import { imagesBaseUrl } from "../../../../moviesBrowserApi";
 import noPoster from "./noPoster.png";
 import { Rating } from "../../../../common/Rating";

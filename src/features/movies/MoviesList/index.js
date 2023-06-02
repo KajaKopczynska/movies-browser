@@ -6,7 +6,7 @@ import { SectionTitle } from "../../../common/SectionTitle";
 import { MovieList, StyledLink } from "./styled";
 import { MovieTile } from "../MovieTile";
 import { Pagination } from "../../../common/Pagination";
-import { fetchGenres } from "../MovieTile/Genre/genreSlice";
+import { fetchGenres } from "../../../common/Genre/genreSlice";
 import { useSearchParams } from "react-router-dom";
 import { searchQueryParamName } from "../../../useQueryParameter";
 import { Loading } from "../../../common/status/Loading";

@@ -1,5 +1,5 @@
 import { TileWrapper, Image, Description, Title, Subtitle } from "./styled";
-import { Genre } from "./Genre";
+import { Genre } from "../../../common/Genre";
 import { imagesBaseUrl } from "../../../moviesBrowserApi";
 import noPoster from "./Images/noPoster.png";
 import { Rating } from "../../../common/Rating";
