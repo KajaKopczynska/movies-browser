@@ -12,14 +12,20 @@ export const MovieInfoWrapper = styled.div`
   grid-column-gap: 40px;
   grid-template-columns: minmax(114px, 312px) auto;
   grid-template-areas:
-    "i information"
-    "i description"
-    "i x";
-
+    "image information"
+    "image description"
+    "image x";
 
   @media (max-width: ${mobileMaxBP}px) {
     grid-template-columns: auto 1fr;
-    padding: 12px;
+    grid-column-gap: 16px;
+    margin-top: 0px;
+    padding: 16px;
+
+    grid-template-areas:
+    "image information"
+    "image information"
+    "description description";
   }
 `;
 
@@ -29,8 +35,8 @@ export const Image = styled.img`
   height: 434px;
   width: 292px;
   border-radius: 5px;
-  margin-bottom: 24px;
-  grid-area: i;
+  margin-bottom: 20px;
+  grid-area: image;
 
   @media (max-width: ${mobileMaxBP}px) {
     width: 114px;
@@ -58,31 +64,32 @@ export const Information = styled.div`
 
 export const Title = styled.h2`
   color: ${({ theme }) => theme.colors.smoke};
-  font-size: 22px;
-  font-weight: 500;
+  font-size: 36px;
+  font-weight: 600;
   line-height: 1.3;
   margin: 16px 0 0;
 
   @media (max-width: ${mobileMaxBP}px) {
-    margin: 0 0 0 8px;
+    margin: 0;
     font-size: 16px;
+    font-weight: 500;
   }
 `;
 
 export const Subtitle = styled.p`
-  color: ${({ theme }) => theme.colors.waterloo};
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 400;
-  margin: 0;
 
   @media (max-width: ${mobileMaxBP}px) {
-    margin: 0 0 0 8px;
-    font-size: 12px;
+    color: ${({ theme }) => theme.colors.waterloo};
+    margin: 0;
+    font-size: 13px;
   }
 `;
 
 export const Details = styled.div`
   font-size: 18px;
+  line-height: 1.3;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -94,7 +101,7 @@ export const Details = styled.div`
 `;
 
 export const Label = styled.span`
-  color: ${({ theme }) => theme.colors.stormGrey};
+  color: ${({ theme }) => theme.colors.stormGray};
   margin-right: 10px;
 
   @media (max-width: ${mobileMaxBP}px) {
@@ -120,10 +127,11 @@ export const CountryNameShort = styled.span`
 export const Description = styled.p`
   font-size: 20px;
   line-height: 160%;
-  /* margin: 0; */
+  margin-top: -10px;
   grid-area: description;
 
   @media (max-width: ${mobileMaxBP}px) {
     font-size: 14px;
+    margin: 0;
   }
 `;
