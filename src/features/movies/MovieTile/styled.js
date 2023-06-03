@@ -4,7 +4,7 @@ const mobileBP = ({ theme }) => theme.breakpoints.mobileMax;
 
 export const TileWrapper = styled.div`
   height: 100%;
-  background: #ffffff;
+  background-color: ${({ theme }) => theme.colors.white};
   display: grid;
   grid-template-rows: auto 1fr;
   transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
