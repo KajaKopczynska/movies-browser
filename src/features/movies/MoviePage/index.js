@@ -11,6 +11,7 @@ import { MovieInfo } from "./MovieInfo";
 import { MainContent } from "../../../common/MainContent";
 import { Container } from "../../../common/Container";
 import { PersonTile } from "../../people/PersonTile";
+import { Cast } from "./Cast";
 
 export const MoviePage = () => {
     const dispatch = useDispatch();
@@ -39,6 +40,7 @@ export const MoviePage = () => {
                     <MainContent moviePage>
                         <Container>
                             <MovieInfo />
+                            <Cast />
                         </Container>
                     </MainContent>
 
