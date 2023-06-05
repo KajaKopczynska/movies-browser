@@ -1,5 +1,5 @@
 import { imagesBaseUrl } from "../../../moviesBrowserApi";
-import noPhoto from "./noPhoto.png";
+import noPhoto from "./Images/noPhoto.png";
 import { Image, TileWrapper, Title, Subtitle } from "./styled";
 
 export const PersonTile = ({
