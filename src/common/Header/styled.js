@@ -97,10 +97,9 @@ export const StyledNavLink = styled(NavLink)`
 
   &:hover {
     cursor: pointer;
-    border: 1px solid ${({ theme }) => theme.colors.white};   /* temporarily */
   }
 
-  &:active {
+  &.active {
     border: 1px solid ${({ theme }) => theme.colors.white};
   }
 
