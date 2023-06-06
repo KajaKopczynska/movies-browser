@@ -9,7 +9,6 @@ export const TileWrapper = styled.div`
   display: block;
   transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
   box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
-  /* border-radius: 5px; */
   padding: 16px;
 
   &:hover {
@@ -33,6 +32,7 @@ export const Image = styled.img`
   justify-content: center;
   border-radius: 5px;
   object-fit: cover;
+  aspect-ratio: 3 / 4;
 `;
 
 export const Title = styled.h2`

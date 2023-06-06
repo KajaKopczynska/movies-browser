@@ -9,15 +9,13 @@ export const SectionTitle = styled.h2`
   line-height: 120%;
 
   @media (max-width: ${mobileBP}px) {
-    margin: 0 0 12px 0;
+    margin: 21px 0 12px 0;
     max-width: 1368px;
     font-size: 18px;
   }
   ${({ detailsPage }) =>
     detailsPage &&
     css`
-      margin: 64px 0 24px;
-
       @media (max-width: ${mobileBP}px) {
         margin: 24px 0 16px;
       }
