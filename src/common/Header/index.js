@@ -17,7 +17,7 @@ const Header = () => {
                                 <StyledNavLink to="/movies">MOVIES</StyledNavLink>
                             </li>
                             <li>
-                                <StyledNavLink>PEOPLE</StyledNavLink>
+                                <StyledNavLink to="/people">PEOPLE</StyledNavLink>
                             </li>
                         </Navigation>
                     </nav>
