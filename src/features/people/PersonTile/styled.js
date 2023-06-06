@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 const mobileBP = ({ theme }) => theme.breakpoints.mobileMin;
 
 export const TileWrapper = styled.div`
-  height: 100%;
   background-color: ${({ theme }) => theme.colors.white};
-  display: grid;
-  grid-template-rows: auto 1fr;
+  height: 100%;
+  text-align: center;
+  display: block;
   transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
   box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
-  border-radius: 5px;
+  /* border-radius: 5px; */
   padding: 16px;
 
   &:hover {
@@ -28,39 +28,32 @@ export const TileWrapper = styled.div`
 `;
 
 export const Image = styled.img`
+  width: 100%;
   display: flex;
   justify-content: center;
-  height: 434px;
-  width: 292px;
   border-radius: 5px;
-
-  @media (max-width: ${mobileBP}px) {
-    width: 114px;
-    height: 169px;
-  }
+  object-fit: cover;
 `;
 
 export const Title = styled.h2`
-  font-weight: 500;
-  font-size: 22px;
-  line-height: 1.3;
   color: ${({ theme }) => theme.colors.smoke};
-  margin: 16px 0 0;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin: 12px 0 0 0;
 
   @media (max-width: ${mobileBP}px) {
-    margin: 0 0 0 8px;
-    font-size: 16px;
+    font-size: 14px;
+    margin: 8px 0 0 0;
   }
 `;
 
 export const Subtitle = styled.p`
-  font-weight: 400;
-  font-size: 18px;
-  margin: 0;
   color: ${({ theme }) => theme.colors.waterloo};
+  font-size: 18px;
+  margin: 8px 0 0 0;
 
   @media (max-width: ${mobileBP}px) {
-    margin: 0 0 0 8px;
-    font-size: 12px;
+    font-size: 13px;
   }
 `;
