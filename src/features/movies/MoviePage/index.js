@@ -12,6 +12,7 @@ import { MainContent } from "../../../common/MainContent";
 import { Container } from "../../../common/Container";
 import { PersonTile } from "../../people/PersonTile";
 import { Cast } from "./Cast";
+import { Crew } from "./Crew";
 
 export const MoviePage = () => {
     const dispatch = useDispatch();
@@ -41,13 +42,9 @@ export const MoviePage = () => {
                         <Container>
                             <MovieInfo />
                             <Cast />
+                            <Crew />
                         </Container>
                     </MainContent>
-
-                    <PersonTile />
-                    <Name>
-                        TEST TEST TEST
-                    </Name>
                 </>
             )}
         </>
