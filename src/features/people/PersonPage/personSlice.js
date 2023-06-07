@@ -21,11 +21,11 @@ const personSlice = createSlice({
             cast: [],
             crew: [],
         }),
-        fetchPersonSuccess: (_, { payload: { person, details } }) => ({
+        fetchPersonSuccess: (_, { payload: { person, personDetails } }) => ({
             status: "success",
-            person: details,
-            cast: person.cast,
-            crew: person.crew,
+            person: person,
+            cast: personDetails.cast,
+            crew: personDetails.crew,
         }),
     },
 });

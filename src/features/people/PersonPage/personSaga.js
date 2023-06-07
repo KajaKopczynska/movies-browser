@@ -8,11 +8,11 @@ function* fetchPersonHandler({ payload: id }) {
 
     try {
         yield delay(500);
-        const [person, details] = yield all([
+        const [personDetails, person] = yield all([
             call(getApi, personPath),
             call(getApi, detailsPath),
         ]);
-        yield put(fetchPersonSuccess({ person, details }));
+        yield put(fetchPersonSuccess({ person, personDetails }));
     } catch (error) {
         yield put(fetchPersonError());
     }
