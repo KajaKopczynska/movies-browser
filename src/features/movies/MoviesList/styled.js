@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 const mobileMediumBP = ({ theme }) => theme.breakpoints.medium;
 const mobileMaxBP = ({ theme }) => theme.breakpoints.mobileMax;
 const mobileLargeBP = ({ theme }) => theme.breakpoints.large;
@@ -26,8 +25,4 @@ export const MovieList = styled.div`
     gap: 16px;
     grid-template-columns: 1fr;
   }
-`;
-
-export const StyledLink = styled(Link)`
-  text-decoration: none;
 `;

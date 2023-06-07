@@ -15,7 +15,7 @@ export const MovieTile = ({
 }) => {
 
     return (
-        <TileWrapper key={id} id={id}>
+        <TileWrapper to={`/movies/${id}`}>
             <Image
                 src={poster_path ? `${imagesBaseUrl}/w500${poster_path}` : noPoster}
                 alt=""

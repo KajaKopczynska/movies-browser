@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const mobileBP = ({ theme }) => theme.breakpoints.mobileMax;
 
-export const TileWrapper = styled.div`
+export const TileWrapper = styled(Link)`
   height: 100%;
   background-color: ${({ theme }) => theme.colors.white};
   display: grid;
@@ -11,6 +12,7 @@ export const TileWrapper = styled.div`
   box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
   border-radius: 5px;
   padding: 16px;
+  text-decoration: none;
 
   &:hover {
     cursor: pointer;
