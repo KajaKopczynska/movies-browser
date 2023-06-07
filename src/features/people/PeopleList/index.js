@@ -52,13 +52,11 @@ const PeopleList = () => {
                                                 name,
                                             }) => (
                                                 <li key={id}>
-                                                    <StyledLink to={`/people/${id}`}>
                                                     <PersonTile
                                                         id={id}
                                                         profile_path={profile_path}
                                                         name={name}
                                                     />
-                                                    </StyledLink>
                                                 </li>
                                             )
                                         )}
