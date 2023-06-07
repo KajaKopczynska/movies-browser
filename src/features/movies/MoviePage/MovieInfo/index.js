@@ -1,6 +1,5 @@
 import { Image, Description as Information, Title, Subtitle, MovieInfoWrapper, CountryName, CountryNameShort, Label, Details, Description } from "./styled";
 import { format } from 'date-fns';
-import { Genre } from "../../../../common/Genre";
 import { Rating } from "../../../../common/Rating";
 import { imagesBaseUrl } from "../../../../moviesBrowserApi";
 import noPoster from "./noPoster.png";
@@ -8,15 +7,7 @@ import { useSelector } from "react-redux";
 import { selectMovie } from "../movieSlice";
 import { GenreTag, GenreWrapper } from "../../../../common/Genre/styled";
 
-export const MovieInfo = ({
-    id,
-    title,
-    poster_path,
-    release_date,
-    vote_average,
-    vote_count,
-    genre_ids,
-}) => {
+export const MovieInfo = () => {
     const movieInfo = useSelector(selectMovie);
 
     const releaseDate = new Date(movieInfo.release_date);

@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { fetchMovieLoading, selectMovieStatus } from "./movieSlice";
-import { Name } from "./styled";
 import { Loading } from "../../../common/status/Loading";
 import { Error } from "../../../common/status/Error";
 import { searchQueryParamName } from "../../../useQueryParameter";
@@ -10,7 +9,6 @@ import { BigPoster } from "./BigPoster";
 import { MovieInfo } from "./MovieInfo";
 import { MainContent } from "../../../common/MainContent";
 import { Container } from "../../../common/Container";
-import { PersonTile } from "../../people/PersonTile";
 import { Cast } from "./Cast";
 import { Crew } from "./Crew";
 
