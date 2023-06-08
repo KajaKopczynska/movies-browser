@@ -75,3 +75,37 @@ export const Title = styled.h2`
     font-weight: 500;
   }
 `;
+
+export const Details = styled.div`
+  font-size: 18px;
+  line-height: 1.3;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+
+  @media (max-width: ${mobileMaxBP}px) {
+    font-size: 12px;
+  }
+`;
+
+export const Label = styled.span`
+  color: ${({ theme }) => theme.colors.stormGray};
+  margin-right: 10px;
+
+  @media (max-width: ${mobileMaxBP}px) {
+    display: none;
+  }
+`;
+
+export const Description = styled.p`
+  font-size: 20px;
+  line-height: 160%;
+  margin-top: -10px;
+  grid-area: description;
+
+  @media (max-width: ${mobileMaxBP}px) {
+    font-size: 14px;
+    margin: 0;
+  }
+`;
