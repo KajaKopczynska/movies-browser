@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { selectPerson } from "../personSlice";
 import noPhoto from "./noPhoto.png";
-import { Description, Details, Image, Information, Label, PersonInfoWrapper, Title } from "./styled";
+import { Description, Details, Image, Information, Label, LabelShort, LabelWrapper, PersonInfoWrapper, Title, ValueLabel } from "./styled";
 import { imagesBaseUrl } from "../../../../moviesBrowserApi";
 import { format } from 'date-fns';
 
@@ -26,14 +26,16 @@ export const PersonInfo = () => {
                     {personInfo.birthday && (
                         <div>
                             <Label>Date of birth:</Label>
+                            <LabelShort>Birth:</LabelShort>
                             {formattedDate}
                         </div>
                     )}
                     {personInfo.place_of_birth && (
-                        <div>
+                        <LabelWrapper>
                             <Label>Place of birth:</Label>
-                            {personInfo.place_of_birth}
-                        </div>
+                            <LabelShort>Place of birth:</LabelShort> 
+                            <ValueLabel>{personInfo.place_of_birth}</ValueLabel>
+                        </LabelWrapper>
                     )}
                 </Details>
             </div>

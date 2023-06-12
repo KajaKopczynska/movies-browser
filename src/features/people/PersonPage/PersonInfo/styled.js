@@ -8,9 +8,9 @@ export const PersonInfoWrapper = styled.div`
   margin-top: 64px;
   box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
   display: grid;
-  /* justify-items: center; */
+  column-gap: 40px;
   grid-column-gap: 40px;
-  grid-template-columns: minmax(114px, 312px) auto;
+  grid-template-columns: minmax(116px, 399px) auto;
   grid-template-areas:
     "image information"
     "image description"
@@ -19,6 +19,7 @@ export const PersonInfoWrapper = styled.div`
   @media (max-width: ${mobileMaxBP}px) {
     grid-template-columns: auto 1fr;
     grid-column-gap: 16px;
+    column-gap: 16px;
     margin-top: 0px;
     padding: 16px;
 
@@ -30,17 +31,13 @@ export const PersonInfoWrapper = styled.div`
 `;
 
 export const Image = styled.img`
-  /* display: flex; */
-  /* justify-content: center; */
-  height: 434px;
-  width: 292px;
+  width: 100%;
   border-radius: 5px;
   margin-bottom: 20px;
   grid-area: image;
 
   @media (max-width: ${mobileMaxBP}px) {
-    width: 114px;
-    height: 169px;
+    width: 116px;
   }
 `;
 
@@ -48,18 +45,7 @@ export const Information = styled.div`
   display: flex;
   justify-self: left;
   flex-direction: column;
-  /* display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between; */
-  /* display: grid; */
   grid-area: information;
-
-  @media (max-width: ${mobileMaxBP}px) {
-    justify-content: start;
-    margin: 0 0 0 8px;
-    gap: 4px;
-  }
 `;
 
 export const Title = styled.h2`
@@ -67,11 +53,10 @@ export const Title = styled.h2`
   font-size: 36px;
   font-weight: 600;
   line-height: 1.3;
-  margin: 16px 0 0;
+  margin: 0;
 
   @media (max-width: ${mobileMaxBP}px) {
-    margin: 0;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
   }
 `;
@@ -82,10 +67,21 @@ export const Details = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8px;
-  margin-bottom: 24px;
+  margin: 24px 0;
 
   @media (max-width: ${mobileMaxBP}px) {
     font-size: 12px;
+    margin: 16px 0;
+    line-height: 1.4;
+  }
+`;
+
+export const LabelWrapper = styled.div`
+  
+  @media (max-width: ${mobileMaxBP}px) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 `;
 
@@ -95,6 +91,24 @@ export const Label = styled.span`
 
   @media (max-width: ${mobileMaxBP}px) {
     display: none;
+  }
+`;
+
+export const LabelShort = styled.span`
+  display: none;
+
+  @media (max-width: ${mobileMaxBP}px) {
+    color: ${({ theme }) => theme.colors.stormGray};
+    margin-right: 6px;
+    display: inline;
+  }
+`;
+
+export const ValueLabel = styled.span`
+    color: ${({ theme }) => theme.colors.black};
+    white-space: nowrap;
+
+  @media (max-width: ${mobileMaxBP}px) {
   }
 `;
 
