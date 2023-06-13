@@ -33,6 +33,7 @@ export const Title = styled.h1`
   font-weight: 600;
   line-height: 120%;
   margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 
   @media (max-width: ${mobileMaxBP}px) {
     font-size: 24px;

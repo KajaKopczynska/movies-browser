@@ -106,7 +106,6 @@ export const LabelShort = styled.span`
 
 export const ValueLabel = styled.span`
     color: ${({ theme }) => theme.colors.black};
-    white-space: nowrap;
 
   @media (max-width: ${mobileMaxBP}px) {
   }
