@@ -8,6 +8,7 @@ import { searchQueryParamName } from "../../../useQueryParameter";
 import { PersonInfo } from "./PersonInfo";
 import { MainContent } from "../../../common/MainContent";
 import { Container } from "../../../common/Container";
+import { PersonCast } from "./PersonCast";
 
 export const PersonPage = () => {
     const dispatch = useDispatch();
@@ -39,6 +40,7 @@ export const PersonPage = () => {
                     <MainContent>
                         <Container>
                             <PersonInfo />
+                            <PersonCast />
                         </Container>
                     </MainContent>
                 </>
