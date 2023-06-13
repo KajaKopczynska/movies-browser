@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const mobileBP = ({ theme }) => theme.breakpoints.mobileMax;
 
 export const TileWrapper = styled(Link)`
-  height: 100%;
   background-color: ${({ theme }) => theme.colors.white};
+  height: 100%;
   display: grid;
   grid-template-rows: auto 1fr;
   transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
@@ -30,10 +30,9 @@ export const TileWrapper = styled(Link)`
 `;
 
 export const Image = styled.img`
+  width: 100%;
   display: flex;
   justify-content: center;
-  height: 434px;
-  width: 292px;
   border-radius: 5px;
 
   @media (max-width: ${mobileBP}px) {
