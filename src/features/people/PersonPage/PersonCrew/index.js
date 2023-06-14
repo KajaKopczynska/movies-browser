@@ -11,7 +11,7 @@ export const PersonCrew = () => {
     return (
         <Container>
             <SectionTitle>
-                Movies - crew
+                Movies - crew {"("}{crew.length}{")"}
             </SectionTitle>
             {crew && crew.length > 0 && (
                 <MoviesList>

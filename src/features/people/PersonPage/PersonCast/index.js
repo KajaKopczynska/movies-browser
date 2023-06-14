@@ -11,7 +11,7 @@ export const PersonCast = () => {
     return (
         <Container>
             <SectionTitle>
-                Movies - cast
+                Movies - cast {"("}{cast.length}{")"}
             </SectionTitle>
             {cast && cast.length > 0 && (
                 <MoviesList>
@@ -22,7 +22,8 @@ export const PersonCast = () => {
                         poster_path,
                         release_date,
                         vote_average,
-                        vote_count,genre_ids,
+                        vote_count,
+                        genre_ids,
                     }) => (
                         <li key={credit_id}>
                             <MovieTile
