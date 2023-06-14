@@ -30,11 +30,11 @@ export const {
     fetchPeopleSuccess,
 } = peopleSlice.actions;
 
-const selecPeopleState = (state) => state.people;
+const selectPeopleState = (state) => state.people;
 
-export const selectPeople = (state) => selecPeopleState(state).people;
-export const selectStatus = (state) => selecPeopleState(state).status;
-export const selectTotalPages = (state) => selecPeopleState(state).totalPages;
-export const selectTotalResults = (state) => selecPeopleState(state).totalResults;
+export const selectPeople = (state) => selectPeopleState(state).people;
+export const selectStatus = (state) => selectPeopleState(state).status;
+export const selectTotalPages = (state) => selectPeopleState(state).totalPages;
+export const selectTotalResults = (state) => selectPeopleState(state).totalResults;
 
 export default peopleSlice.reducer;
