@@ -9,6 +9,7 @@ import { PersonInfo } from "./PersonInfo";
 import { MainContent } from "../../../common/MainContent";
 import { Container } from "../../../common/Container";
 import { PersonCast } from "./PersonCast";
+import { PersonCrew } from "./PersonCrew";
 
 export const PersonPage = () => {
     const dispatch = useDispatch();
@@ -41,6 +42,7 @@ export const PersonPage = () => {
                         <Container>
                             <PersonInfo />
                             <PersonCast />
+                            <PersonCrew />
                         </Container>
                     </MainContent>
                 </>
