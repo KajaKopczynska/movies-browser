@@ -34,7 +34,7 @@ export const Search = () => {
                         ? "Search for movies..."
                         : "Search for people..."
                 }
-                value={query}
+                value={query || ""}
                 onChange={onInputChange}
             />
         </SearchWrapper>
