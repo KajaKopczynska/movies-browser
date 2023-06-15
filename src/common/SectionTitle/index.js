@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+
 const mobileBP = ({ theme }) => theme.breakpoints.mobileMax;
 
 export const SectionTitle = styled.h2`
@@ -9,7 +10,7 @@ export const SectionTitle = styled.h2`
   line-height: 120%;
 
   @media (max-width: ${mobileBP}px) {
-    margin: 21px 0 12px 0;
+    margin: 0 0 12px 0;
     max-width: 1368px;
     font-size: 18px;
   }
