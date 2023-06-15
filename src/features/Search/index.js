@@ -38,5 +38,5 @@ export const Search = () => {
                 onChange={onInputChange}
             />
         </SearchWrapper>
-    )
+    );
 };
