@@ -4,6 +4,7 @@ import { watchFetchGenres } from "./common/Genre/genreSaga";
 import { watchFetchMovie } from "./features/movies/MoviePage/movieSaga";
 import { watchFetchPeople } from "./features/people/peopleSaga";
 import { watchFetchPerson } from "./features/people/PersonPage/personSaga";
+import { watchFetchSearch } from "./features/Search/searchSaga";
 
 export default function* saga() {
     yield all([
@@ -12,5 +13,6 @@ export default function* saga() {
         watchFetchMovie(),
         watchFetchPeople(),
         watchFetchPerson(),
+        watchFetchSearch(),
     ]);
 };

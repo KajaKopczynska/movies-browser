@@ -6,6 +6,7 @@ import genreReducer from "./common/Genre/genreSlice";
 import movieReducer from "./features/movies/MoviePage/movieSlice";
 import peopleReducer from "./features/people/peopleSlice";
 import personReducer from "./features/people/PersonPage/personSlice";
+import searchReducer from "./features/Search/searchSlice";
 
 const SagaMiddleware = createSagaMiddleware();
 
@@ -16,6 +17,7 @@ const store = configureStore({
         movie: movieReducer,
         people: peopleReducer,
         person: personReducer,
+        search: searchReducer,
     },
     middleware: [SagaMiddleware],
 });
