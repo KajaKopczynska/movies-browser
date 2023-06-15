@@ -1,7 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom"
 import { searchQueryParamName } from "./useQueryParameter";
 
-export const useUpdateQueryParameter = () => {
+export const useReplaceQueryParameter = () => {
     const location = useLocation();
     const navigate = useNavigate();
 
