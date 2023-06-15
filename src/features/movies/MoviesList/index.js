@@ -19,7 +19,7 @@ const MoviesList = () => {
     const movies = useSelector(selectMovies);
     const totalPages = useSelector(selectTotalPages);
     const stateOfLoading = useSelector(selectStatus);
-    // const totalResults = useSelector(selectTotalResults);
+    const totalResults = useSelector(selectTotalResults);
 
     const [searchParams] = useSearchParams({ page: 1 });
     const page = Number(searchParams.get("page")) || 1;
@@ -42,7 +42,10 @@ const MoviesList = () => {
                         <Container>
                             <section>
                                 <SectionTitle>
-                                    Popular movies
+                                    {query
+                                        ? `Search results for "${query}" (${totalResults})`
+                                        : "Popular movies"
+                                    }
                                 </SectionTitle>
                                 {movies && movies.length > 0 && (
                                     <MovieList>

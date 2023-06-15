@@ -19,7 +19,7 @@ const PeopleList = () => {
     const people = useSelector(selectPeople);
     const totalPages = useSelector(selectTotalPages);
     const stateOfLoading = useSelector(selectStatus);
-    // const totalResults = useSelector(selectTotalResults);
+    const totalResults = useSelector(selectTotalResults);
 
     const [searchParams] = useSearchParams({ page: 1 });
     const page = Number(searchParams.get("page")) || 1;
@@ -41,7 +41,10 @@ const PeopleList = () => {
                         <Container>
                             <section>
                                 <SectionTitle>
-                                    People list
+                                    {query
+                                        ? `Search results for "${query}" (${totalResults})`
+                                        : "Popular people"
+                                    }
                                 </SectionTitle>
                                 {people && people.length > 0 && (
                                     <MovieList>
