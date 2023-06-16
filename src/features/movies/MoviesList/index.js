@@ -12,6 +12,7 @@ import { searchQueryParamName } from "../../../useQueryParameter";
 import { Loading } from "../../../common/status/Loading";
 import { MainContent } from "../../../common/MainContent";
 import { Error } from "../../../common/status/Error";
+import { NoResults } from "../../../common/status/NoResults";
 
 const MoviesList = () => {
     const dispatch = useDispatch();
@@ -38,46 +39,50 @@ const MoviesList = () => {
                 <Error />
             ) : (
                 <MainContent>
-                    <>
-                        <Container>
-                            <section>
-                                <SectionTitle>
-                                    {query
-                                        ? `Search results for "${query}" (${totalResults})`
-                                        : "Popular movies"
-                                    }
-                                </SectionTitle>
-                                {movies && movies.length > 0 && (
-                                    <MovieList>
-                                        {movies.map(
-                                            ({
-                                                id,
-                                                title,
-                                                poster_path,
-                                                vote_count,
-                                                vote_average,
-                                                release_date,
-                                                genre_ids,
-                                            }) => (
-                                                <li key={id}>
-                                                    <MovieTile
-                                                        id={id}
-                                                        title={title}
-                                                        poster_path={poster_path}
-                                                        vote_average={vote_average}
-                                                        vote_count={vote_count}
-                                                        release_date={release_date}
-                                                        genre_ids={genre_ids}
-                                                    />
-                                                </li>
-                                            )
-                                        )}
-                                    </MovieList>
-                                )}
-                            </section>
-                        </Container>
-                        <Pagination location="movies" totalPages={totalPages} />
-                    </>
+                    {!movies.length ? (
+                        <NoResults query={query} />
+                    ) : (
+                        <>
+                            <Container>
+                                <section>
+                                    <SectionTitle>
+                                        {query
+                                            ? `Search results for "${query}" (${totalResults})`
+                                            : "Popular movies"
+                                        }
+                                    </SectionTitle>
+                                    {movies && movies.length > 0 && (
+                                        <MovieList>
+                                            {movies.map(
+                                                ({
+                                                    id,
+                                                    title,
+                                                    poster_path,
+                                                    vote_count,
+                                                    vote_average,
+                                                    release_date,
+                                                    genre_ids,
+                                                }) => (
+                                                    <li key={id}>
+                                                        <MovieTile
+                                                            id={id}
+                                                            title={title}
+                                                            poster_path={poster_path}
+                                                            vote_average={vote_average}
+                                                            vote_count={vote_count}
+                                                            release_date={release_date}
+                                                            genre_ids={genre_ids}
+                                                        />
+                                                    </li>
+                                                )
+                                            )}
+                                        </MovieList>
+                                    )}
+                                </section>
+                            </Container>
+                            <Pagination location="movies" totalPages={totalPages} />
+                        </>
+                    )}
                 </MainContent>
             )}
         </>

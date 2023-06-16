@@ -11,6 +11,7 @@ import { searchQueryParamName } from "../../../useQueryParameter";
 import { Loading } from "../../../common/status/Loading";
 import { MainContent } from "../../../common/MainContent";
 import { Error } from "../../../common/status/Error";
+import { NoResults } from "../../../common/status/NoResults";
 
 
 const PeopleList = () => {
@@ -37,38 +38,42 @@ const PeopleList = () => {
                 <Error />
             ) : (
                 <MainContent>
-                    <>
-                        <Container>
-                            <section>
-                                <SectionTitle>
-                                    {query
-                                        ? `Search results for "${query}" (${totalResults})`
-                                        : "Popular people"
-                                    }
-                                </SectionTitle>
-                                {people && people.length > 0 && (
-                                    <MovieList>
-                                        {people.map(
-                                            ({
-                                                id,
-                                                profile_path,
-                                                name,
-                                            }) => (
-                                                <li key={id}>
-                                                    <PersonTile
-                                                        id={id}
-                                                        profile_path={profile_path}
-                                                        name={name}
-                                                    />
-                                                </li>
-                                            )
-                                        )}
-                                    </MovieList>
-                                )}
-                            </section>
-                        </Container>
-                        <Pagination location="people" totalPages={totalPages} />
-                    </>
+                    {!people.length ? (
+                        <NoResults query={query} />
+                    ) : (
+                        <>
+                            <Container>
+                                <section>
+                                    <SectionTitle>
+                                        {query
+                                            ? `Search results for "${query}" (${totalResults})`
+                                            : "Popular people"
+                                        }
+                                    </SectionTitle>
+                                    {people && people.length > 0 && (
+                                        <MovieList>
+                                            {people.map(
+                                                ({
+                                                    id,
+                                                    profile_path,
+                                                    name,
+                                                }) => (
+                                                    <li key={id}>
+                                                        <PersonTile
+                                                            id={id}
+                                                            profile_path={profile_path}
+                                                            name={name}
+                                                        />
+                                                    </li>
+                                                )
+                                            )}
+                                        </MovieList>
+                                    )}
+                                </section>
+                            </Container>
+                            <Pagination location="people" totalPages={totalPages} />
+                        </>
+                    )}
                 </MainContent>
             )}
         </>
