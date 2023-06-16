@@ -13,7 +13,7 @@ export const StyledHeader = styled.header`
   @media (max-width: ${mobileBP}px) {
     background: ${({ theme }) => theme.colors.black};
     padding: 16px;
-    height: 142px;
+    height: 132px;
   }
 `;
 
