@@ -7,7 +7,8 @@ export const Pagination = ({ location, totalPages }) => {
     const [searchParams, setSearchParams] = useSearchParams();
     const currentPage = Number(searchParams.get("page")) || 1;
     const query = searchParams.get(searchQueryParamName);
-    const totalPage = totalPages > 500 ? 500 : totalPages;
+    const maxPage = 500;
+    const totalPage = totalPages > maxPage ? maxPage : totalPages;
 
     const onGoToFirst = () => {
         if (currentPage !== 1) {
@@ -60,11 +61,11 @@ export const Pagination = ({ location, totalPages }) => {
                 of
                 <PageNumbers>{totalPage}</PageNumbers>
             </PageCounter>
-            <Button disabled={currentPage >= totalPages} onClick={onGoToNext}>
+            <Button disabled={currentPage >= totalPages || currentPage === maxPage} onClick={onGoToNext}>
                 <ButtonText>Next</ButtonText>
                 <ArrowIconRight />
             </Button>
-            <Button disabled={currentPage >= totalPages} onClick={onGoToLast}>
+            <Button disabled={currentPage >= totalPages || currentPage === maxPage} onClick={onGoToLast}>
                 <ButtonText>Last</ButtonText>
                 <ArrowIconRight />
                 <ArrowIconRight mobile="true" />
