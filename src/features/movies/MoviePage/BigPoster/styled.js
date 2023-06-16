@@ -1,4 +1,6 @@
 import styled from "styled-components";
+
+const largeBP = ({ theme }) => theme.breakpoints.large;
 const mobileMaxBP = ({ theme }) => theme.breakpoints.mobileMax;
 
 export const Wrapper = styled.div`
@@ -19,7 +21,14 @@ export const Info = styled.div`
   gap: 25px;
   position: absolute;
   bottom: 56px;
-  left: clamp(1rem, -2.25rem + 16.25vw, 17.25rem);
+  max-width: 1368px;
+  left: 23vw;
+
+  @media (max-width: ${largeBP}px) {
+    left: 16px;
+    gap: 10px;
+    bottom: 16px;
+  }
 
   @media (max-width: ${mobileMaxBP}px) {
     gap: 6px;
@@ -47,41 +56,39 @@ export const Gradient = styled.div`
   background: 
     linear-gradient(
       90deg, 
-      rgba(0,0,0,1) 13%, 
-      rgba(0,0,0,0.9808298319327731) 14%, 
-      rgba(0,0,0,0.9612219887955182) 15%, 
-      rgba(0,0,0,0.865983893557423) 16%,
-      rgba(0,0,0,0.23012955182072825) 22%, 
-      rgba(0,0,0,0.05) 24%, 
-      rgba(0,0,0,0) 25%
+      rgba(0,0,0,1) 24%, 
+      rgba(0,0,0,0.7371323529411764) 27%, 
+      rgba(0,0,0,0.6222864145658263) 28%, 
+      rgba(0,0,0,0.258140756302521) 31%, 
+      rgba(0,0,0,0.1516981792717087) 33%, 
+      rgba(0,0,0,0) 36%
       ),
     linear-gradient(
       270deg, 
-      rgba(0,0,0,1) 13%, 
-      rgba(0,0,0,0.9808298319327731) 14%, 
-      rgba(0,0,0,0.9612219887955182) 15%, 
-      rgba(0,0,0,0.865983893557423) 16%, 
-      rgba(0,0,0,0.23012955182072825) 22%, 
-      rgba(0,0,0,0.05) 24%, 
-      rgba(0,0,0,0) 25%
+      rgba(0,0,0,1) 24%, 
+      rgba(0,0,0,0.7371323529411764) 27%, 
+      rgba(0,0,0,0.6222864145658263) 28%, 
+      rgba(0,0,0,0.258140756302521) 31%, 
+      rgba(0,0,0,0.1516981792717087) 33%, 
+      rgba(0,0,0,0) 36%
       ),
     linear-gradient(
       180deg, 
       rgba(0,0,0,1) 1%, 
-      rgba(0,0,0,0.9808298319327731) 2%, 
-      rgba(0,0,0,0.9612219887955182) 3%, 
-      rgba(0,0,0,0.865983893557423) 4%, 
-      rgba(0,0,0,0.23012955182072825) 5%, 
-      rgba(0,0,0,0) 6%
+      rgba(0,0,0,0.7371323529411764) 5%, 
+      rgba(0,0,0,0.6222864145658263) 6%, 
+      rgba(0,0,0,0.258140756302521) 11%, 
+      rgba(0,0,0,0.1516981792717087) 13%, 
+      rgba(0,0,0,0) 16%
       ),
     linear-gradient(
       4deg, 
-      rgba(0,0,0,1) 2%, 
-      rgba(0,0,0,0.9808298319327731) 4%, 
-      rgba(0,0,0,0.9612219887955182) 6%, 
-      rgba(0,0,0,0.865983893557423) 8%, 
-      rgba(0,0,0,0.23012955182072825) 12%, 
-      rgba(0,0,0,0) 15%
+      rgba(0,0,0,1) 4%, 
+      rgba(0,0,0,0.7371323529411764) 8%, 
+      rgba(0,0,0,0.6222864145658263) 10%, 
+      rgba(0,0,0,0.258140756302521) 15%, 
+      rgba(0,0,0,0.1516981792717087) 17%, 
+      rgba(0,0,0,0) 21%
       );
 
   @media (max-width: ${mobileMaxBP}px) {
