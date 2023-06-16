@@ -6,7 +6,7 @@ export const MainContent = styled.main`
   padding: 0 16px 40px;
 
   @media (max-width: ${mobileBP}px) {
-    padding: 24px 16px 32px;
+    padding: 12px 16px 32px;
   }
   
   ${({ moviePage }) =>
