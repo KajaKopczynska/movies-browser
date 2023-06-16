@@ -8,8 +8,8 @@ export const RatingWrapper = styled.div`
   align-items: center;
 
   ${({ location }) =>
-        location === "backgroundPoster" &&
-        css`
+    location === "backgroundPoster" &&
+    css`
       flex-direction: column;
       align-items: flex-start;
       gap: 16px;
@@ -35,9 +35,10 @@ export const Star = styled(StarIcon)`
     width: 16px;
     height: 16px;
   }
+  
   ${({ location }) =>
-        location === "backgroundPoster" &&
-        css`
+    location === "backgroundPoster" &&
+    css`
       width: 40px;
       height: 38px;
     `}
@@ -55,8 +56,8 @@ export const Rate = styled.span`
     line-height: 130%;
   }
   ${({ location }) =>
-        location === "backgroundPoster" &&
-        css`
+    location === "backgroundPoster" &&
+    css`
       color: ${({ theme }) => theme.colors.white};
       font-size: 30px;
 
@@ -64,9 +65,10 @@ export const Rate = styled.span`
         font-size: 14px;
       }
     `}
+
   ${({ location }) =>
-        location === "movieInfo" &&
-        css`
+    location === "movieInfo" &&
+    css`
           font-size: 22px;
     `}
 `;
@@ -78,9 +80,10 @@ export const MaxRate = styled.span`
   @media (max-width: ${mobileMaxBP}px) {
     font-size: 10px;
   }
+
   ${({ location }) =>
-        location === "backgroundPoster" &&
-        css`
+    location === "backgroundPoster" &&
+    css`
 
       @media (max-width: ${mobileMaxBP}px) {
         visibility: visible;
@@ -88,15 +91,15 @@ export const MaxRate = styled.span`
     `}  
 
   ${({ location }) =>
-        location === "movieTile" &&
-        css`
+    location === "movieTile" &&
+    css`
         visibility: collapse;
         display: none;
     `}
 
   ${({ location }) =>
-        location === "movieInfo" &&
-        css`
+    location === "movieInfo" &&
+    css`
         font-size: 14px;
         visibility: visible;
 
@@ -117,19 +120,22 @@ export const Votes = styled.span`
     font-size: 10px;
     line-height: 130%;
   }
+
   ${({ location }) =>
-        location === "backgroundPoster" &&
-        css`
+    location === "backgroundPoster" &&
+    css`
       color: ${({ theme }) => theme.colors.white};
       font-size: 16px;
+      margin: 0;
 
       @media (max-width: ${mobileMaxBP}px) {
         font-size: 10px;
       }
     `}
+
   ${({ location }) =>
-        location === "movieInfo" &&
-        css`
+    location === "movieInfo" &&
+    css`
           color: ${({ theme }) => theme.colors.black};
           font-size: 14px;
 
