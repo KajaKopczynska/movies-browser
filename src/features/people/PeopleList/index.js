@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { fetchPeopleLoading, selectPeople, selectTotalPages, selectStatus, selectTotalResults } from "../peopleSlice";
 import { Container } from "../../../common/Container";
 import { SectionTitle } from "../../../common/SectionTitle";
-import { MovieList, StyledLink } from "./styled";
+import { MovieList } from "./styled";
 import { PersonTile } from "../PersonTile";
 import { Pagination } from "../../../common/Pagination";
 import { useSearchParams } from "react-router-dom";
@@ -12,7 +12,6 @@ import { Loading } from "../../../common/status/Loading";
 import { MainContent } from "../../../common/MainContent";
 import { Error } from "../../../common/status/Error";
 import { NoResults } from "../../../common/status/NoResults";
-
 
 const PeopleList = () => {
     const dispatch = useDispatch();

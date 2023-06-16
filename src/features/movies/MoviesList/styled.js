@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 const mobileMediumBP = ({ theme }) => theme.breakpoints.medium;
 const mobileMaxBP = ({ theme }) => theme.breakpoints.mobileMax;
 const mobileLargeBP = ({ theme }) => theme.breakpoints.large;

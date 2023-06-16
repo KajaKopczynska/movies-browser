@@ -5,7 +5,6 @@ import { Description, Details, Image, Information, Label, LabelShort, LabelWrapp
 import { imagesBaseUrl } from "../../../../moviesBrowserApi";
 import { format } from 'date-fns';
 
-
 export const PersonInfo = () => {
     const personInfo = useSelector(selectPerson);
 
@@ -33,7 +32,7 @@ export const PersonInfo = () => {
                     {personInfo.place_of_birth && (
                         <LabelWrapper>
                             <Label>Place of birth:</Label>
-                            <LabelShort>Place of birth:</LabelShort> 
+                            <LabelShort>Place of birth:</LabelShort>
                             <ValueLabel>{personInfo.place_of_birth}</ValueLabel>
                         </LabelWrapper>
                     )}

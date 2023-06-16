@@ -19,6 +19,7 @@ export const NoResultsImage = styled(NoResults)`
      scale: 80%;
      margin: -100px;
    }
+   
    @media (max-width: ${mobileMinBP}px) {
      scale: 50%;
      margin: -150px;

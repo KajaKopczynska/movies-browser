@@ -11,20 +11,7 @@ export const SearchWrapper = styled.div`
 `;
 
 export const SearchIcon = styled(IconSearch)`
-  margin: 10px;
-  /* color: ${({ theme }) => theme.colors.waterloo};
-  background-color: ${({ theme }) => theme.colors.white};
-  height: 18px;
-  width: 18px;
-  border-radius: 32px 0 0 33px;
-  display: flex;
-  align-items: center;
-  justify-content: right;
-
-  @media (max-width: ${mobileBP}px) {
-    height: 44px;
-    width: 35px;
-  } */
+  margin: 10px 10px 10px 15px;
 `;
 
 export const SearchInput = styled.input`

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 const mobileMaxBP = ({ theme }) => theme.breakpoints.mobileMax;
 
 export const Name = styled.h2`

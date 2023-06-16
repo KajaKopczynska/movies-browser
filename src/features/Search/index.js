@@ -21,7 +21,6 @@ export const Search = () => {
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-
         dispatch(fetchSearchSuccess(query));
     };
 

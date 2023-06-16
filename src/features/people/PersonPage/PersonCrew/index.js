@@ -27,13 +27,13 @@ export const PersonCrew = () => {
                     }) => (
                         <li key={credit_id}>
                             <MovieTile
-                            id={id}
-                            title={title}
-                            poster_path={poster_path}
-                            release_date={release_date}
-                            vote_average={vote_average}
-                            vote_count={vote_count}
-                            genre_ids={genre_ids}
+                                id={id}
+                                title={title}
+                                poster_path={poster_path}
+                                release_date={release_date}
+                                vote_average={vote_average}
+                                vote_count={vote_count}
+                                genre_ids={genre_ids}
                             />
                         </li>
                     ))}

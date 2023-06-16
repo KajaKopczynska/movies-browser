@@ -8,7 +8,6 @@ export const MovieInfoWrapper = styled.div`
   margin-top: 64px;
   box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
   display: grid;
-  /* justify-items: center; */
   grid-column-gap: 40px;
   grid-template-columns: minmax(114px, 312px) auto;
   grid-template-areas:
@@ -30,8 +29,6 @@ export const MovieInfoWrapper = styled.div`
 `;
 
 export const Image = styled.img`
-  /* display: flex; */
-  /* justify-content: center; */
   height: 434px;
   width: 292px;
   border-radius: 5px;
@@ -48,11 +45,6 @@ export const Information = styled.div`
   display: flex;
   justify-self: left;
   flex-direction: column;
-  /* display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between; */
-  /* display: grid; */
   grid-area: information;
 
   @media (max-width: ${mobileMaxBP}px) {
@@ -117,7 +109,7 @@ export const CountryName = styled.span`
 `;
 
 export const CountryNameShort = styled.span`
-    display: none;
+  display: none;
 
   @media (max-width: ${mobileMaxBP}px) {
     display: inline;

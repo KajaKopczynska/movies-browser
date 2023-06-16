@@ -14,10 +14,10 @@ const searchSlice = createSlice({
         fetchSearchError: (state) => {
             state.status = "error";
         },
-        fetchSearchSuccess: (state, {payload: search}) => {
-        state.status = "success";
-        state.movies = search.results;
-        state.totalResults = search.total_results;
+        fetchSearchSuccess: (state, { payload: search }) => {
+            state.status = "success";
+            state.movies = search.results;
+            state.totalResults = search.total_results;
         },
     },
 });

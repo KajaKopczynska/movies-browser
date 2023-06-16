@@ -14,8 +14,7 @@ const genreSlice = createSlice({
   },
 });
 
-export const { fetchGenres, fetchGenresError, fetchGenresSuccess } =
-  genreSlice.actions;
+export const { fetchGenres, fetchGenresError, fetchGenresSuccess } = genreSlice.actions;
 
 const selectGenresState = (state) => state.genres;
 

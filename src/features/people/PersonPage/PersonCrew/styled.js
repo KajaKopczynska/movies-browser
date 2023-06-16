@@ -26,6 +26,6 @@ export const MoviesList = styled.div`
   @media (max-width: ${mediumBP}px) {
     grid-template-columns: 1fr;
     gap: 16px;
-  } ;
-  `;
+  }
+`;
 

@@ -1,6 +1,6 @@
 import styled, { css, keyframes } from "styled-components";
-import {ReactComponent as ArrowLeft} from "./ArrowLeft.svg";
-import {ReactComponent as ArrowRight} from "./ArrowRight.svg";
+import { ReactComponent as ArrowLeft } from "./ArrowLeft.svg";
+import { ReactComponent as ArrowRight } from "./ArrowRight.svg";
 
 const mobileBP = ({ theme }) => theme.breakpoints.mobileMax;
 
@@ -57,7 +57,7 @@ export const ArrowIconLeft = styled(ArrowLeft)`
     mobile &&
     css`
       display: none;
-    `};
+    `}
 
   ${Button}:disabled & {
     color: ${({ theme }) => theme.colors.waterloo};
@@ -69,7 +69,7 @@ export const ArrowIconLeft = styled(ArrowLeft)`
 
   @media (max-width: ${mobileBP}px) {
     display: block;
-  } ;
+  }
 `;
 
 export const ButtonText = styled.p`
@@ -77,7 +77,7 @@ export const ButtonText = styled.p`
 
   @media (max-width: ${mobileBP}px) {
     display: none;
-  } ;
+  }
 `;
 
 export const PageCounter = styled.div`
@@ -90,7 +90,7 @@ export const PageCounter = styled.div`
     font-size: 10px;
     line-height: 24px;
     margin: 0 8px 0 0;
-  } ;
+  }
 `;
 
 export const PageNumbers = styled.span`
@@ -105,7 +105,7 @@ export const PageNumbers = styled.span`
     line-height: 24px;
     margin: 0 2px;
     font-weight: 600;
-  } ;
+  }
 `;
 
 export const ArrowIconRight = styled(ArrowRight)`
@@ -116,7 +116,7 @@ export const ArrowIconRight = styled(ArrowRight)`
     mobile &&
     css`
       display: none;
-    `};
+    `}
 
   ${Button}:disabled & {
     color: ${({ theme }) => theme.colors.waterloo};
@@ -128,5 +128,5 @@ export const ArrowIconRight = styled(ArrowRight)`
 
   @media (max-width: ${mobileBP}px) {
     display: block;
-  } ;
+  }
 `;

@@ -43,8 +43,8 @@ export const Content = styled.div`
 `;
 
 export const Button = styled(NavLink)`
-  color: ${({theme}) => theme.colors.white};
-  background-color: ${({theme}) => theme.colors.scienceBlue};
+  color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.scienceBlue};
   border: none;
   text-decoration: none;
   border-radius: 5px;

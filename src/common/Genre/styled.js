@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+
 const mobileBP = ({ theme }) => theme.breakpoints.mobileMax;
 
 export const GenreWrapper = styled.div`

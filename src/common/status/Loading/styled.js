@@ -1,7 +1,7 @@
 import styled from "styled-components";
+
 const mobileMinBP = ({ theme }) => theme.breakpoints.mobileMin;
 const largeBP = ({ theme }) => theme.breakpoints.large;
-// const mobileBP = ({ theme }) => theme.breakpoints.mobileMax;
 
 export const Wrapper = styled.div`
   display: flex;
@@ -34,8 +34,8 @@ export const LoadingAnimation = styled.div`
     border-top: 8px solid ${({ theme }) => theme.colors.black};
     width: 65px;
     height: 65px;
-
   }
+
   @media (max-width: ${mobileMinBP}px) {
     border: 4px solid ${({ theme }) => theme.colors.snuff};
     border-top: 4px solid ${({ theme }) => theme.colors.black};

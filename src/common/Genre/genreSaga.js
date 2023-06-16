@@ -14,8 +14,8 @@ function* fetchGenresHandler() {
   } catch (error) {
     yield put(fetchGenresError());
   }
-}
+};
 
 export function* watchFetchGenres() {
   yield takeLatest(fetchGenres.type, fetchGenresHandler);
-}
+};

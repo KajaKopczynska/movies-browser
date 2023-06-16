@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import { selectMovieCast } from "../movieSlice";
 import { Container } from "../../../../common/Container";
 import { SectionTitle } from "../../../../common/SectionTitle";
-import {PersonTile} from "../../../people/PersonTile";
+import { PersonTile } from "../../../people/PersonTile";
 import { PeopleList } from "./styled";
 
 export const Cast = () => {
@@ -24,10 +24,10 @@ export const Cast = () => {
                     }) => (
                         <li key={cast_id}>
                             <PersonTile
-                            id={id}
-                            profile_path={profile_path}
-                            name={name}
-                            character={character}
+                                id={id}
+                                profile_path={profile_path}
+                                name={name}
+                                character={character}
                             />
                         </li>
                     ))}
