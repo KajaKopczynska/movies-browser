@@ -1,5 +1,5 @@
-# Mvies Browser
-
+# Movies Browser
+![Screenshot](public/movies-browser-header.png)
 ## Demo
 Try it out - [Click here!](https://kajakopczynska.github.io/movies-browser/)
 
@@ -11,6 +11,8 @@ Dive into a vast collection of movies, actors, and crew members using an easy-to
 Immerse yourself in the captivating world of each movie by simply clicking on a tile. Uncover detailed descriptions and explore a comprehensive list of actors and crew.
 
 Dedicated to showcasing the most popular actors, the app includes a special tab. Browse through visually appealing actor tiles and select any tile to access a page with comprehensive details about their careers, including an extensive filmography.
+
+*All movie data is sourced from [MoviesDB](https://developers.themoviedb.org/3/getting-started).*
 ## How it works
 ![Movies Browser](public/movies-browser.gif)
 
