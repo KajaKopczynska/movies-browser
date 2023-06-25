@@ -3,12 +3,35 @@ import styled from "styled-components";
 const largeBP = ({ theme }) => theme.breakpoints.large;
 const mobileMaxBP = ({ theme }) => theme.breakpoints.mobileMax;
 
+export const BackdropWrapper = styled.div`
+  justify-content: center;
+  animation: eclipse 0.75s ease-in-out;
+  animation-fill-mode: forwards;
+
+  @keyframes eclipse {
+    100% {
+      background-color: ${({ theme }) => theme.colors.black};
+    }
+  }
+`;
+
 export const Wrapper = styled.div`
   color: ${({ theme }) => theme.colors.white};
   background: ${({ theme }) => theme.colors.black};
   display: flex;
   justify-content: center;
   position: relative;
+  max-width: 1368px;
+  margin: 0 auto;
+  animation: reveal 2s ease-in-out 0.75s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+
+  @keyframes reveal {
+    100% {
+      opacity: 1;
+    }
+  }
 `;
 
 export const Poster = styled.img`
@@ -20,9 +43,10 @@ export const Info = styled.div`
   display: grid;
   gap: 25px;
   position: absolute;
+  left: 40px;;
   bottom: 56px;
   max-width: 1368px;
-  left: 23vw;
+
 
   @media (max-width: ${largeBP}px) {
     left: 16px;
@@ -56,30 +80,24 @@ export const Gradient = styled.div`
   background: 
     linear-gradient(
       90deg, 
-      rgba(0,0,0,1) 24%, 
-      rgba(0,0,0,0.7371323529411764) 27%, 
-      rgba(0,0,0,0.6222864145658263) 28%, 
-      rgba(0,0,0,0.258140756302521) 31%, 
-      rgba(0,0,0,0.1516981792717087) 33%, 
-      rgba(0,0,0,0) 36%
+      rgba(0,0,0,1) 3%, rgba(0,0,0,1) 4%, 
+      rgba(0,0,0,0.6222864145658263) 9%, 
+      rgba(0,0,0,0.1516981792717087) 13%, 
+      rgba(0,0,0,0) 15%
       ),
     linear-gradient(
       270deg, 
-      rgba(0,0,0,1) 24%, 
-      rgba(0,0,0,0.7371323529411764) 27%, 
-      rgba(0,0,0,0.6222864145658263) 28%, 
-      rgba(0,0,0,0.258140756302521) 31%, 
-      rgba(0,0,0,0.1516981792717087) 33%, 
-      rgba(0,0,0,0) 36%
+      rgba(0,0,0,1) 3%, rgba(0,0,0,1) 4%, 
+      rgba(0,0,0,0.6222864145658263) 9%, 
+      rgba(0,0,0,0.1516981792717087) 13%, 
+      rgba(0,0,0,0) 15%
       ),
     linear-gradient(
       180deg, 
       rgba(0,0,0,1) 1%, 
-      rgba(0,0,0,0.7371323529411764) 5%, 
-      rgba(0,0,0,0.6222864145658263) 6%, 
-      rgba(0,0,0,0.258140756302521) 11%, 
-      rgba(0,0,0,0.1516981792717087) 13%, 
-      rgba(0,0,0,0) 16%
+      rgba(0,0,0,0.6222864145658263) 3%, 
+      rgba(0,0,0,0.1516981792717087) 6%, 
+      rgba(0,0,0,0) 8%
       ),
     linear-gradient(
       4deg, 
