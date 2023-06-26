@@ -34,6 +34,15 @@ export const Image = styled.img`
   display: flex;
   justify-content: center;
   border-radius: 5px;
+  opacity: 0;
+  animation: reveal 0.7s ease-in-out 0.25s;
+  animation-fill-mode: forwards;
+
+  @keyframes reveal {
+        100% {
+          opacity: 1;
+        }
+      }
 
   @media (max-width: ${mobileBP}px) {
     width: 114px;

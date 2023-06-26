@@ -35,6 +35,15 @@ export const Image = styled.img`
   border-radius: 5px;
   object-fit: cover;
   aspect-ratio: 3 / 4;
+  opacity: 0;
+  animation: reveal 0.7s ease-in-out 0.25s;
+  animation-fill-mode: forwards;
+
+  @keyframes reveal {
+        100% {
+          opacity: 1;
+        }
+      }
 `;
 
 export const Title = styled.h2`
